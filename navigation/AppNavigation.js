@@ -4,10 +4,12 @@ import {MainScreen} from '../screens/MainScreen';
 import {FeedScreen} from '../screens/FeedScreen';
 import {UserScreen} from '../screens/UserScreen';
 import {ProfileScreen} from '../screens/ProfileScreen';
+import {useSelector} from 'react-redux';
 
 const Stack = createStackNavigator();
 
 export const AppNavigation = () => {
+  const items = useSelector(state => state.items);
   return (
     // <NavigationContainer>
     <Stack.Navigator>
@@ -28,7 +30,7 @@ export const AppNavigation = () => {
       />
       <Stack.Screen
         name="Profile"
-        component={ProfileScreen}
+        component={items ? ProfileScreen : UserScreen}
         options={{title: 'Profile'}}
       />
     </Stack.Navigator>

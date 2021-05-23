@@ -14,8 +14,6 @@ const Tab = createBottomTabNavigator();
 export const TabNav = () => {
   const items = useSelector(state => state.items);
 
-  console.log(items);
-
   return (
     <NavigationContainer>
       <Tab.Navigator
