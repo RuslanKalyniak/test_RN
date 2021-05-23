@@ -1,0 +1,6 @@
+module Pods_Task_Test_Estonia_Task_Test_EstoniaTests {
+  umbrella header "Pods-Task_Test_Estonia-Task_Test_EstoniaTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
